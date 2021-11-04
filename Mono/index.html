@@ -313,23 +313,6 @@
 		  	paintGreen();
   		}
 
-  		function sleep(num){	//[1/1000초]
-
-  			var now = new Date();
-
-  			var stop = now.getTime() + num;
-
-  			while(true){
-
-  				now = new Date();
-
-  				if(now.getTime() > stop)return;
-
-  			}
-
-  		}
-
-
   		function pushDown(arr, row){
   			lineClear(arr,row);
   			for (var i = row; i >= 1; i--){
