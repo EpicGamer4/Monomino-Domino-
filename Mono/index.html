@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MONO</title>
+
+<style type="text/css">
+	body{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.main{
+		width: 800px;
+		height: 800px;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+	}
+
+	.top{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		width: 100%;
+		height: 40%;
+	}
+
+	.bottom{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		width: 100%;
+		height: 60%;
+	}
+
+	.hor{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		width: 100%;
+		height: 100%;
+	}
+
+	.ver{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		width: 40%;
+		height: 100%;
+	}
+
+	.menu{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		border: 1px solid black;
+		width: 60%;
+		height: 100%;
+	}
+
+	.row{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: stretch;
+		width: 100%;
+		height: 25%;
+	}
+	.red{
+		background: lightpink;
+		border: 1px solid black;
+		width: 10%;
+		height: 100%;
+		transition: 0.1s;
+	}
+
+	.hor .cell{
+		border: 1px solid black;
+		width: 10%;
+		height: 100%;
+	}
+
+	.ver .cell{
+		border: 1px solid black;
+		width: 25%;
+		height: 100%;
+	}
+
+	@media(max-width: 800px){
+		.main{
+			width: 400px;
+			height: 400px;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="main">
+		<div class="top">
+			<div class="hor">
+				<div class="row">
+					<div class="red" id="red00"></div>
+					<div class="red" id="red01"></div>
+					<div class="red" id="red02"></div>
+					<div class="red" id="red03"></div>
+					<div class="cell" id="r1c5"></div>
+					<div class="cell" id="r1c6"></div>
+					<div class="cell" id="r1c7"></div>
+					<div class="cell" id="r1c8"></div>
+					<div class="cell" id="r1c9"></div>
+					<div class="cell" id="r1c10"></div>
+				</div>
+				<div class="row">
+					<div class="red" id="red10"></div>
+					<div class="red" id="red11"></div>
+					<div class="red" id="red12"></div>
+					<div class="red" id="red13"></div>
+					<div class="cell" id="r2c5"></div>
+					<div class="cell" id="r2c6"></div>
+					<div class="cell" id="r2c7"></div>
+					<div class="cell" id="r2c8"></div>
+					<div class="cell" id="r2c9"></div>
+					<div class="cell" id="r2c10"></div>
+				</div>
+				<div class="row">
+					<div class="red" id="red20"></div>
+					<div class="red" id="red21"></div>
+					<div class="red" id="red22"></div>
+					<div class="red" id="red23"></div>
+					<div class="cell" id="r3c5"></div>
+					<div class="cell" id="r3c6"></div>
+					<div class="cell" id="r3c7"></div>
+					<div class="cell" id="r3c8"></div>
+					<div class="cell" id="r3c9"></div>
+					<div class="cell" id="r3c10"></div>
+				</div>
+				<div class="row">
+					<div class="red" id="red30"></div>
+					<div class="red" id="red31"></div>
+					<div class="red" id="red32"></div>
+					<div class="red" id="red33"></div>
+					<div class="cell" id="r4c5"></div>
+					<div class="cell" id="r4c6"></div>
+					<div class="cell" id="r4c7"></div>
+					<div class="cell" id="r4c8"></div>
+					<div class="cell" id="r4c9"></div>
+					<div class="cell" id="r4c10"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="ver">
+				<div class="row">
+					<div class="cell" id="r5c1"></div>
+					<div class="cell" id="r5c2"></div>
+					<div class="cell" id="r5c3"></div>
+					<div class="cell" id="r5c4"></div>
+				</div>
+				<div class="row">
+					<div class="cell" id="r6c1"></div>
+					<div class="cell" id="r6c2"></div>
+					<div class="cell" id="r6c3"></div>
+					<div class="cell" id="r6c4"></div>
+				</div>
+				<div class="row">
+					<div class="cell" id="r7c1"></div>
+					<div class="cell" id="r7c2"></div>
+					<div class="cell" id="r7c3"></div>
+					<div class="cell" id="r7c4"></div>
+				</div>
+				<div class="row">
+					<div class="cell" id="r8c1"></div>
+					<div class="cell" id="r8c2"></div>
+					<div class="cell" id="r8c3"></div>
+					<div class="cell" id="r8c4"></div>
+				</div>
+				<div class="row">
+					<div class="cell" id="r9c1"></div>
+					<div class="cell" id="r9c2"></div>
+					<div class="cell" id="r9c3"></div>
+					<div class="cell" id="r9c4"></div>
+				</div>
+				<div class="row">
+					<div class="cell" id="r10c1"></div>
+					<div class="cell" id="r10c2"></div>
+					<div class="cell" id="r10c3"></div>
+					<div class="cell" id="r10c4"></div>
+				</div>
+			</div>
+			<div class="menu">
+				asdasdasdsa
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		//function showMenu(){navLinks.style.right = "0";} 색바꾸기 참조하기
+		//난수 생성 코드 1~3 리턴함.
+		// var rd = Math.floor(Math.random() * 3) + 1;
+		// 배열에 담아서 처리를 하고 난 뒤에 페이지에 보여줌.
+		// 1. 빨강 0,0에 블럭을 담는다.
+		// 2. 방향키로 움직인다.
+		// 3. 보낸다.
+		//4. 맨 처음에 블록 하나 있어야 한다. 그냥 내가 적어둔다. 우선은.
+		//블럭을 보낸다.
+		//도착한다.
+		//지울거 지운다.
+		//다음 블럭 생성한다.
+		//끝.
+		//빨강에서 움직이는거 구현하기
+		//블럭 보내기 만들자.
+
+
+
+		var red = 	[
+						[1,0,0,0],
+						[1,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0]
+					];
+
+		var green = [
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0]
+					]; //세로
+
+		var blue = 	[
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0],
+						[0,0,0,0]
+					]; //가로
+
+		var block = [0,0,2];
+
+		document.addEventListener('keydown', asd, false);
+
+		function asd(e){
+		  	if(e.keyCode == 38){ //up
+		  		up();
+		  	}
+		  	if(e.keyCode == 40){ //d
+		  		down();
+		  	}
+		  	if(e.keyCode == 37){ //l
+		  		left();
+		  	}
+		  	if(e.keyCode == 39){ //r
+		  		right();
+		  	}
+		  	if(e.keyCode == 32){ //space
+		  		send();
+		  	}
+		  	paintRed();
+  		}
+
+  		function send(){
+
+  		}
+
+  		function findBottom(arr, to, col){
+
+  		}
+
+
+
+  		function create(){
+  			block[2] = Math.floor(Math.random() * 3) + 1;
+
+  			if(block[2] == 1){
+  				red[0][0] = 1;
+  			}else if(block[2] == 2){
+  				red[0][0] = 1;
+  				red[1][0] = 1;
+  			}else if(block[2] == 3){
+				red[0][0] = 1;
+  				red[0][1] = 1;
+  			}
+  		}
+
+
+  		function paintRed(){
+  			var flag = false;
+  			for(var i = 0; i < 4; i++){
+  				for(var j = 0; j < 4; j++){
+  					if(red[i][j] == 1){
+  						if(!flag){
+  							block[0] = i;
+  							block[1] = j;
+  							flag = true;
+  						}
+  						document.getElementById("red" + i + j).style.background="red";
+  					}else{
+  						document.getElementById("red" + i + j).style.background="lightpink";
+  					}
+  				}
+  			}
+  		}
+
+  		function up(){
+  			for(var i = 0; i < 4; i++){
+  				if(red[0][i] == 1){
+  					return;
+  				}
+  			}
+  			for(var i = 1; i < 4; i++){
+  				for(var j = 0; j < 4; j++){
+  					if(red[i][j] == 1){
+  						red[i][j] = 0;
+  						red[i-1][j] = 1;
+  					}
+  				}
+  			}
+  		}
+  		function down(){
+  			for(var i = 0; i < 4; i++){
+  				if(red[3][i] == 1){
+  					return;
+  				}
+  			}
+  			for(var i = 2; i >= 0; i--){
+  				for(var j = 0; j < 4; j++){
+  					if(red[i][j] == 1){
+  						red[i][j] = 0;
+  						red[i+1][j] = 1;
+  					}
+  				}
+  			}
+  		}
+  		function left(){
+  			for(var i = 0; i < 4; i++){
+  				if(red[i][0] == 1){
+  					return;
+  				}
+  			}
+  			for(var i = 1; i < 4; i++){
+  				for(var j = 0; j < 4; j++){
+  					if(red[j][i] == 1){
+  						red[j][i] = 0;
+  						red[j][i-1] = 1;
+  					}
+  				}
+  			}
+  		}
+  		function right(){
+  			  for(var i = 0; i < 4; i++){
+  				if(red[i][3] == 1){
+  					return;
+  				}
+  			}
+  			for(var i = 2; i >= 0; i--){
+  				for(var j = 0; j < 4; j++){
+  					if(red[j][i] == 1){
+  						red[j][i] = 0;
+  						red[j][i+1] = 1;
+  					}
+  				}
+  			}
+  		}
+
+
+
+	</script>
+
+</body>
+</html>
